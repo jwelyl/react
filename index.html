@@ -16,15 +16,21 @@
     }
 
     function render() {
-      ReactDOM.render(<Container />, root);
+      ReactDOM.render(<App />, root);
     }
 
-    const Container = () => (
-      <div>
-        <h3>Total clicks: {counter}</h3>
-        <button onClick={countUp}>Click me</button>
-      </div>
-    );
+    function App() {
+      const data = React.useState(0);
+      console.log(data);
+
+      return (
+        <div>
+          <h3>Total clicks: 0</h3>
+          <button>Click me</button>
+        </div>
+      );
+    }
+
     render();
   </script>
 </html>
